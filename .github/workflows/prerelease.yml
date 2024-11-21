@@ -69,7 +69,6 @@ jobs:
     - name: Build documentation
       run: |
         echo "Release version ${{ env.RELEASE_NR }}"
-        sed -e "s/\(version\s=\s\"\)[^\"]*\"/\1${{ env.RELEASE_NR }}\"/" CITATION.cff
         pdoc -o docs --footer-text ${{ env.RELEASE_NR }} -t docs/dark-mode --logo https://raw.githubusercontent.com/what-will-we-eat/project-site-dev/refs/heads/main/static/main/img/banner.jpg ./pyvsva
 
     - name: Add and commit changes
