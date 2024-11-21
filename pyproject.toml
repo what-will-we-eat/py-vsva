@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "pyvsva"
+version = "v0.0.1"
+description = "Common functions for the 'Vad Ska Vi Ata?' project"
+authors = ["BobBorges <robert.d.borges@gmail.com>"]
+repository = ""
+readme = "README.md"
+licence = "MIT"
+packages = [
+    { include = "pyvsva", from = "" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+lxml = "*"
+pandas = "*"
+pyriksdagen = "*"
+tqdm = "*"
+
+[tool.poetry.dev-dependencies]
+devtools = "^0.5.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
